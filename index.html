@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aayush Saxena — AI Engineer & Data Scientist</title>
+  <meta name="description" content="Portfolio & link-in-bio for Aayush Saxena — AI Engineer & Data Scientist. Projects in insurance, e‑commerce, and healthcare. ML, NLP, CV, FastAPI, MLflow." />
+  <meta property="og:title" content="Aayush Saxena — AI Engineer & Data Scientist" />
+  <meta property="og:description" content="Portfolio & link-in-bio for Aayush Saxena — AI Engineer & Data Scientist." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/0?v=4" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020;           /* deep slate */
+      --panel:#0f172a;        /* slate-900 */
+      --panel-2:#111827;      /* slightly lighter */
+      --text:#e5e7eb;         /* zinc-200 */
+      --muted:#94a3b8;        /* slate-400 */
+      --accent:#8b5cf6;       /* violet-500 */
+      --accent-2:#06b6d4;     /* cyan-500 */
+      --ok:#22c55e;           /* green */
+      --card:#0b132e;         /* card bg */
+      --border:#1f2937;       /* border */
+      --chip:#0b2545;         /* chip */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+      color:var(--text); background: radial-gradient(1200px 800px at 90% -20%, rgba(139,92,246,.15), transparent 60%),
+                         radial-gradient(900px 600px at -10% 20%, rgba(6,182,212,.12), transparent 55%),
+                         var(--bg);
+    }
+    a{color:inherit}
+    .container{max-width:1100px; margin:0 auto; padding:24px 20px 56px}
+
+    /* Topbar */
+    .topbar{position:sticky; top:0; z-index:30; backdrop-filter:saturate(120%) blur(10px); background:rgba(11,16,32,.6); border-bottom:1px solid var(--border)}
+    .topbar-inner{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 20px}
+    .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+    .logo .dot{width:12px; height:12px; border-radius:99px; background:linear-gradient(45deg, var(--accent), var(--accent-2)); box-shadow:0 0 0 3px rgba(139,92,246,.15)}
+    .nav{display:flex; gap:14px; flex-wrap:wrap}
+    .nav a{padding:8px 12px; border:1px solid var(--border); border-radius:12px; text-decoration:none; color:var(--text); opacity:.85}
+    .nav a:hover{opacity:1; border-color:#334155}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:28px; align-items:center; padding:36px 0 8px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}}
+    .title{font-size:clamp(28px,4.5vw,48px); font-weight:900; line-height:1.06; margin:0 0 10px}
+    .title .gradient{background:linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 40%, #22d3ee 70%); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .subtitle{color:var(--muted); font-size:clamp(14px,2vw,18px); max-width:58ch}
+    .cta{display:flex; gap:12px; margin:18px 0 0; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; text-decoration:none; border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.0)); box-shadow:var(--shadow)}
+    .btn.primary{border-color:transparent; background:linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%); color:#0b1020; font-weight:800}
+    .btn:hover{transform:translateY(-1px)}
+
+    .avatar-card{background:linear-gradient(180deg, #0c142a, #0a1226); border:1px solid var(--border); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+    .avatar{width:100%; aspect-ratio:1/1; border-radius:16px; object-fit:cover; border:1px solid #1f2a44; background:#0b1430}
+    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .chip{padding:8px 10px; border-radius:999px; border:1px solid #21314d; background: linear-gradient(180deg,#0c1b37,#0b1830); font-size:12.5px; color:#cbd5e1}
+
+    /* Sections */
+    .section{margin-top:42px}
+    .section h2{font-size:22px; letter-spacing:.3px; margin:0 0 14px}
+    .grid{display:grid; grid-template-columns: repeat(12, 1fr); gap:16px}
+    .card{grid-column: span 6; background:linear-gradient(180deg,#0b132e,#0a1226); border:1px solid var(--border); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+    .card:hover{border-color:#334155}
+    @media (max-width:900px){.card{grid-column: span 12}}
+    .card h3{margin:0 0 8px; font-size:18px}
+    .card p{margin:0; color:#bdc7d6}
+    .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
+    .tag{font-size:12px; padding:6px 8px; border:1px solid #23304e; border-radius:999px; background:#0b1b36; color:#a9c3ff}
+
+    .list{display:grid; gap:10px}
+    .list-item{display:flex; gap:10px; align-items:flex-start; padding:12px; border-radius:12px; border:1px solid var(--border); background:#0b132e}
+    .when{font-size:12px; color:#93a1b7}
+
+    /* Links (Link‑in‑bio) */
+    #links .links-wrap{display:grid; gap:12px}
+    .link-btn{display:flex; align-items:center; gap:12px; padding:16px; border-radius:16px; text-decoration:none; border:1px solid var(--border); background:linear-gradient(180deg,#0b132e,#0a1226)}
+    .link-btn:hover{border-color:#334155}
+
+    /* Footer */
+    footer{margin:42px 0 0; padding-top:24px; border-top:1px solid var(--border); color:#8aa0ba; display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between}
+
+    /* Links‑only mode for LinkedIn bio */
+    .links-only .section{display:none}
+    .links-only #links{display:block}
+    .links-only .hero{display:none}
+    .links-only .topbar .nav{display:none}
+    .links-only body{background: radial-gradient(1200px 800px at 50% -10%, rgba(6,182,212,.14), transparent 60%), var(--bg)}
+    .links-only #links .link-btn{padding:18px 18px}
+
+    /* Utility */
+    .muted{color:var(--muted)}
+    .icon{width:18px; height:18px; opacity:.9}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner container">
+      <div class="logo"><span class="dot"></span> <span>Aayush Saxena</span></div>
+      <nav class="nav">
+        <a href="#links">Links</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1 class="title">AI Engineer & Data Scientist<br><span class="gradient">building reliable ML systems</span></h1>
+        <p class="subtitle">I ship end‑to‑end machine learning solutions across insurance, e‑commerce and healthcare — with clean APIs, strong evaluation, and production‑ready deployments.</p>
+        <div class="cta">
+          <a class="btn primary" href="assets/Aayush_DataScience_CV.pdf" download>
+            <!-- download icon -->
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Résumé
+          </a>
+          <a class="btn" href="mailto:m.aayushsaxena@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/storytellingengineer/" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0zM8 8.98h4.78v2.04h.07c.67-1.26 2.3-2.59 4.73-2.59 5.06 0 6 3.33 6 7.65V24h-5v-6.77c0-1.62-.03-3.7-2.25-3.7-2.25 0-2.6 1.76-2.6 3.58V24H8z"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn" href="#links">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 1 7 0l1 1a5 5 0 0 1-7 7l-1-1"/><path d="M14 11a5 5 0 0 1-7 0l-1-1a5 5 0 0 1 7-7l1 1"/></svg>
+            Quick Links
+          </a>
+        </div>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">MLflow</span>
+          <span class="chip">NLP & LLMs</span>
+          <span class="chip">Vector DBs</span>
+          <span class="chip">Docker</span>
+        </div>
+      </div>
+      <aside class="avatar-card">
+        <img class="avatar" src="assets/profile.jpg" alt="Portrait of Aayush Saxena" />
+        <div class="chips" aria-label="Stats">
+          <span class="chip">3+ yrs experience</span>
+          <span class="chip">Insurance • E‑com • Health</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Links (Link‑in‑bio) -->
+    <section id="links" class="section">
+      <h2>Links</h2>
+      <div class="links-wrap">
+        <a class="link-btn" href="https://github.com/storytellingengineer" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.33.9 11.6c0 4.88 3.16 9.02 7.55 10.48.55.1.75-.24.75-.53 0-.26-.01-1.14-.02-2.07-3.07.67-3.72-1.32-3.72-1.32-.5-1.27-1.22-1.61-1.22-1.61-.99-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.67 2.58 1.18 3.21.9.1-.71.38-1.18.69-1.45-2.45-.28-5.02-1.22-5.02-5.42 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.41.11-2.94 0 0 .93-.3 3.05 1.13a10.6 10.6 0 0 1 5.56 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.53.22 2.66.11 2.94.7.77 1.13 1.75 1.13 2.95 0 4.2-2.58 5.14-5.03 5.42.39.34.73 1.02.73 2.06 0 1.48-.01 2.67-.01 3.04 0 .29.2.64.76.53A10.73 10.73 0 0 0 23.1 11.6C23.1 5.33 18.27.5 12 .5Z"/></svg>
+          GitHub – @storytellingengineer
+        </a>
+        <a class="link-btn" href="https://www.linkedin.com/in/storytellingengineer/" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0zM8 8.98h4.78v2.04h.07c.67-1.26 2.3-2.59 4.73-2.59 5.06 0 6 3.33 6 7.65V24h-5v-6.77c0-1.62-.03-3.7-2.25-3.7-2.25 0-2.6 1.76-2.6 3.58V24H8z"/></svg>
+          LinkedIn – @storytellingengineer
+        </a>
+        <a class="link-btn" href="assets/Aayush_DataScience_CV.pdf" target="_blank">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+          Résumé (PDF)
+        </a>
+        <a class="link-btn" href="mailto:m.aayushsaxena@gmail.com">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email – m.aayushsaxena@gmail.com
+        </a>
+        <!-- Optional placeholders you can update later -->
+        <a class="link-btn" href="#" target="_blank" rel="noopener">Topmate / Calendly (optional)</a>
+        <a class="link-btn" href="#" target="_blank" rel="noopener">Blog / Medium (optional)</a>
+      </div>
+      <p class="muted" style="margin-top:10px">Tip: Use <code>?mode=links</code> at the end of the URL to show only this Links section (perfect for LinkedIn bio). Example: <em>https://yourusername.github.io/?mode=links</em></p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Insurance Claims Fraud Detection</h3>
+          <p>End‑to‑end fraud scoring with model monitoring and alerting. Improved detection accuracy and reduced manual review.</p>
+          <div class="tags"><span class="tag">XGBoost</span><span class="tag">FastAPI</span><span class="tag">MLflow</span></div>
+        </article>
+        <article class="card">
+          <h3>Customer Churn Prediction</h3>
+          <p>GBM‑based churn model with explainability and actionable triggers for retention workflows.</p>
+          <div class="tags"><span class="tag">GBM</span><span class="tag">Explainability</span><span class="tag">BI</span></div>
+        </article>
+        <article class="card">
+          <h3>VAE on Medical Imaging</h3>
+          <p>Unsupervised anomaly detection on anonymized CT scans; latent‑space visualization with UMAP/t‑SNE.</p>
+          <div class="tags"><span class="tag">VAE</span><span class="tag">PyTorch</span><span class="tag">UMAP</span></div>
+        </article>
+        <article class="card">
+          <h3>Cancer Detection (Semi‑Supervised GANs)</h3>
+          <p>Trained on limited data; achieved strong early‑stage classification performance using GANs.</p>
+          <div class="tags"><span class="tag">GANs</span><span class="tag">TensorFlow</span></div>
+        </article>
+        <article class="card">
+          <h3>Object Detection (TensorFlow API)</h3>
+          <p>SSD‑based real‑time object detection pipeline suitable for edge deployment.</p>
+          <div class="tags"><span class="tag">SSD</span><span class="tag">TF API</span><span class="tag">Edge</span></div>
+        </article>
+        <article class="card">
+          <h3>LLM‑Powered Retrieval Assistant (WIP)</h3>
+          <p>Heading‑aware chunking RAG with vector DB backends (Milvus/Qdrant) and strict evaluation to minimize hallucinations.</p>
+          <div class="tags"><span class="tag">LLMs</span><span class="tag">RAG</span><span class="tag">Vector DB</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="list">
+        <div class="list-item">
+          <div>
+            <strong>Aureus Analytics (Gradatim Insurance Tech) — Data Scientist</strong>
+            <div class="when">Feb 2023 – Present • Gurugram, India</div>
+            <ul>
+              <li>Built predictive models for claims; boosted fraud detection accuracy by ~30%.</li>
+              <li>Developed ML pipelines with MLflow for experiment tracking & versioning.</li>
+              <li>Automated risk stratification workflows reducing manual overhead.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="list-item">
+          <div>
+            <strong>GlobalLogic (Hitachi Group) — Associate Data Analyst</strong>
+            <div class="when">Aug 2021 – May 2022 • Gurugram, India</div>
+            <ul>
+              <li>Recommendation systems for e‑commerce; improved conversions by ~10%.</li>
+              <li>Led A/B testing to refine marketing outreach and budget allocation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="list">
+        <div class="list-item"><div><strong>M.Tech — Applied AI</strong> • VNIT Nagpur <span class="when">2024 – 2026</span></div></div>
+        <div class="list-item"><div><strong>PG Diploma — Data Science & Applications</strong> • Axis India ML <span class="when">2020 – 2021</span></div></div>
+        <div class="list-item"><div><strong>B.Tech — CSE</strong> • JECRC University <span class="when">2016 – 2020</span></div></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="list">
+        <div class="list-item"><div>
+          <div><strong>Email:</strong> <a href="mailto:m.aayushsaxena@gmail.com">m.aayushsaxena@gmail.com</a> <button id="copyMail" class="btn" style="padding:6px 10px; margin-left:8px">Copy</button></div>
+          <div style="margin-top:8px"><strong>GitHub:</strong> <a href="https://github.com/storytellingengineer" target="_blank" rel="noopener">github.com/storytellingengineer</a></div>
+          <div style="margin-top:8px"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/storytellingengineer/" target="_blank" rel="noopener">linkedin.com/in/storytellingengineer</a></div>
+        </div></div>
+      </div>
+    </section>
+
+    <footer>
+      <small>© <span id="year"></span> Aayush Saxena • @storytellingengineer</small>
+      <small class="muted">Built with HTML, CSS, and a pinch of JS. Deployed on GitHub Pages.</small>
+    </footer>
+  </main>
+
+  <script>
+    // Smooth in‑page navigation highlight (basic)
+    document.querySelectorAll('.nav a').forEach(a=>{
+      a.addEventListener('click',()=>{
+        history.replaceState(null, '', a.getAttribute('href'));
+      });
+    });
+
+    // Copy email button
+    const btn=document.getElementById('copyMail');
+    if(btn){btn.addEventListener('click', async()=>{
+      try{await navigator.clipboard.writeText('m.aayushsaxena@gmail.com'); btn.textContent='Copied!'}
+      catch(e){btn.textContent='Copy failed'}
+      setTimeout(()=>btn.textContent='Copy',1500);
+    });}
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Links‑only mode for LinkedIn bio
+    const url = new URL(window.location.href);
+    if(url.searchParams.get('mode') === 'links'){
+      document.documentElement.classList.add('links-only');
+      const links = document.getElementById('links');
+      if(links) links.scrollIntoView({behavior:'instant', block:'start'});
+    }
+  </script>
+</body>
+</html>
