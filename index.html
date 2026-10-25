@@ -39,20 +39,21 @@
                          var(--bg);
     }
     a{color:inherit}
-    .container{max-width:1100px; margin:0 auto; padding:24px 20px 56px}
+    .container{max-width:1180px; margin:0 auto; padding:24px 24px 64px}
 
     /* Topbar */
     .topbar{position:sticky; top:0; z-index:30; backdrop-filter:saturate(120%) blur(10px); background:rgba(11,16,32,.6); border-bottom:1px solid var(--border)}
-    .topbar-inner{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 20px}
-    .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+    .topbar-inner{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:12px 24px}
+    .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px; white-space:nowrap}
     .logo .dot{width:12px; height:12px; border-radius:99px; background:linear-gradient(45deg, var(--accent), var(--accent-2)); box-shadow:0 0 0 3px rgba(139,92,246,.15)}
-    .nav{display:flex; gap:14px; flex-wrap:wrap}
-    .nav a{padding:8px 12px; border:1px solid var(--border); border-radius:12px; text-decoration:none; color:var(--text); opacity:.85}
-    .nav a:hover{opacity:1; border-color:#334155}
+    .nav{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end}
+    .nav a{padding:8px 11px; border:1px solid transparent; border-radius:12px; text-decoration:none; color:var(--muted); font-size:13px; opacity:.95; transition:background .2s ease,border-color .2s ease,color .2s ease}
+    .nav a:hover{opacity:1; border-color:#334155; background:rgba(255,255,255,.04); color:var(--text)}
+    @media (max-width:760px){.topbar-inner{align-items:flex-start; flex-direction:column; padding:12px 20px}.nav{justify-content:flex-start; gap:6px}.nav a{padding:7px 9px;font-size:12px}}
 
     /* Hero */
-    .hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:28px; align-items:center; padding:36px 0 8px}
-    @media (max-width:900px){.hero{grid-template-columns:1fr;}}
+    .hero{display:grid; grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr); gap:36px; align-items:center; padding:48px 0 10px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr; gap:22px; padding-top:32px}}
     .title{font-size:clamp(28px,4.5vw,48px); font-weight:900; line-height:1.06; margin:0 0 10px}
     .title .gradient{background:linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 40%, #22d3ee 70%); -webkit-background-clip:text; background-clip:text; color:transparent}
     .subtitle{color:var(--muted); font-size:clamp(14px,2vw,18px); max-width:58ch}
@@ -67,19 +68,21 @@
     .chip{padding:8px 10px; border-radius:999px; border:1px solid #21314d; background: linear-gradient(180deg,#0c1b37,#0b1830); font-size:12.5px; color:#cbd5e1}
 
     /* Sections */
-    .section{margin-top:42px}
-    .section h2{font-size:22px; letter-spacing:.3px; margin:0 0 14px}
-    .grid{display:grid; grid-template-columns: repeat(12, 1fr); gap:16px}
-    .card{grid-column: span 6; background:linear-gradient(180deg,#0b132e,#0a1226); border:1px solid var(--border); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
-    .card:hover{border-color:#334155}
-    @media (max-width:900px){.card{grid-column: span 12}}
-    .card h3{margin:0 0 8px; font-size:18px}
-    .card p{margin:0; color:#bdc7d6}
+    .section{margin-top:56px; scroll-margin-top:92px}
+    .section h2{font-size:clamp(20px,2.3vw,24px); letter-spacing:.1px; margin:0 0 18px}
+    .section-intro{color:var(--muted); margin:-7px 0 20px; max-width:72ch; line-height:1.65}
+    .grid{display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:18px; align-items:stretch}
+    .card{grid-column:span 6; display:flex; flex-direction:column; min-width:0; background:linear-gradient(145deg,rgba(15,23,42,.98),rgba(10,18,38,.98)); border:1px solid #202c45; border-radius:var(--radius); padding:22px; box-shadow:0 8px 26px rgba(0,0,0,.16); transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+    .card:hover{border-color:#3b4d70; transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.24)}
+    @media (max-width:900px){.card{grid-column:span 12}}
+    .card h3{margin:0 0 9px; font-size:18px; line-height:1.35}
+    .card p{margin:0; color:#bdc7d6; line-height:1.65}
+    @media (prefers-reduced-motion:reduce){.card,.nav a,.btn{transition:none}.card:hover,.btn:hover{transform:none}}
     .project-links{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
     .project-link{display:inline-flex; align-items:center; padding:7px 10px; border:1px solid #2b3a59; border-radius:10px; text-decoration:none; color:#dbeafe; font-size:12px; font-weight:700}
     .project-link:hover{border-color:var(--accent-2); color:#fff}
     .eyebrow{font-size:11px; text-transform:uppercase; letter-spacing:1.3px; color:#67e8f9; font-weight:800; margin-bottom:8px}
-    .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
+    .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; padding-top:16px}
     .tag{font-size:12px; padding:6px 8px; border:1px solid #23304e; border-radius:999px; background:#0b1b36; color:#a9c3ff}
 
     .list{display:grid; gap:10px}
@@ -87,9 +90,10 @@
     .when{font-size:12px; color:#93a1b7}
 
     /* Links (Link‑in‑bio) */
-    #links .links-wrap{display:grid; gap:12px}
-    .link-btn{display:flex; align-items:center; gap:12px; padding:16px; border-radius:16px; text-decoration:none; border:1px solid var(--border); background:linear-gradient(180deg,#0b132e,#0a1226)}
-    .link-btn:hover{border-color:#334155}
+    #links .links-wrap{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px}
+    .link-btn{display:flex; align-items:center; gap:12px; min-width:0; padding:14px 16px; border-radius:14px; text-decoration:none; border:1px solid var(--border); background:linear-gradient(135deg,rgba(15,23,42,.92),rgba(10,18,38,.92)); color:#dbe3f2; transition:border-color .2s ease,transform .2s ease,background .2s ease}
+    .link-btn:hover{border-color:#3b4d70; transform:translateY(-1px); background:#101a31}
+    @media (max-width:640px){#links .links-wrap{grid-template-columns:1fr}}
 
     /* Footer */
     footer{margin:42px 0 0; padding-top:24px; border-top:1px solid var(--border); color:#8aa0ba; display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between}
@@ -186,7 +190,8 @@
 
 remove section    <!-- Projects -->
     <section id="projects" class="section">
-      <h2>Featured Projects</h2>
+      <h2>Selected Projects</h2>
+      <p class="section-intro">A mix of AI evaluation, LLM and RAG applications, agentic systems, and applied ML research — with existing work retained alongside recent builds.</p>
       <div class="grid">
         <article class="card">
           <h3>LLM Evaluation & AI Validation Framework</h3>
