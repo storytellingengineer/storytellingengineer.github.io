@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aayush Saxena — Assistant Manager, AI Validation & Testing</title>
-  <meta name="description" content="Portfolio & link-in-bio for Aayush Saxena — Applied AI Engineer & Data Scientist. Projects in insurance, retail, and healthcare. ML, GenAI, NLP, CV, FastAPI, MLflow." />
-  <meta property="og:title" content="Aayush Saxena — Applied AI Engineer & Data Scientist" />
-  <meta property="og:description" content="Portfolio & link-in-bio for Aayush Saxena — Applied AI Engineer & Data Scientist." />
+  <title>Aayush Saxena — AI Product, GenAI Engineering & FDE</title>
+  <meta name="description" content="Aayush Saxena builds and evaluates AI products: LLM applications, RAG systems, agentic workflows, and reliable AI experiences. AI Product Manager and Forward Deployed Engineer portfolio." />
+  <meta property="og:title" content="Aayush Saxena — AI Product & Engineering" />
+  <meta property="og:description" content="AI product thinking, hands-on GenAI engineering, LLM evaluation, RAG, and agentic systems." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/0?v=4" />
   <meta name="theme-color" content="#0f172a" />
@@ -75,6 +75,10 @@
     @media (max-width:900px){.card{grid-column: span 12}}
     .card h3{margin:0 0 8px; font-size:18px}
     .card p{margin:0; color:#bdc7d6}
+    .project-links{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .project-link{display:inline-flex; align-items:center; padding:7px 10px; border:1px solid #2b3a59; border-radius:10px; text-decoration:none; color:#dbeafe; font-size:12px; font-weight:700}
+    .project-link:hover{border-color:var(--accent-2); color:#fff}
+    .eyebrow{font-size:11px; text-transform:uppercase; letter-spacing:1.3px; color:#67e8f9; font-weight:800; margin-bottom:8px}
     .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
     .tag{font-size:12px; padding:6px 8px; border:1px solid #23304e; border-radius:999px; background:#0b1b36; color:#a9c3ff}
 
@@ -109,6 +113,7 @@
       <div class="logo"><span class="dot"></span> <span>Aayush Saxena</span></div>
       <nav class="nav">
         <a href="#links">Links</a>
+        <a href="#approach">How I work</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
@@ -120,8 +125,8 @@
   <main class="container">
     <section class="hero">
       <div>
-        <h1 class="title">AI Model Consultant & Validation Specialist<br><span class="gradient">GenAI, LLM Evaluation, RAG & Agentic AI</span></h1>
-        <p class="subtitle">AI Validation & Testing professional with 4+ years of experience across Predictive ML, Generative AI, RAG systems, and Agentic AI. Specialized in AI quality assurance, LLM evaluation, model validation, guardrail testing, and production-grade AI assurance frameworks.</p></p>
+        <h1 class="title">I build useful AI products<br><span class="gradient">From problem discovery to reliable deployment</span></h1>
+        <p class="subtitle">AI practitioner working at the intersection of product thinking and hands-on engineering. I turn ambiguous problems into practical LLM, RAG, and agentic workflows—and use evaluation, observability, and iteration to make them more reliable. Currently focused on AI Product Manager and Forward Deployed Engineer roles.</p>
         <div class="cta">
           <a class="btn primary" href="assets/Aayush_DataScience_CV.pdf" download>
             <!-- download icon -->
@@ -138,20 +143,21 @@
           </a>
         </div>
         <div class="chips">
-          <span class="chip">Python</span>
-          <span class="chip">FastAPI</span>
-          <span class="chip">RAG</span>
-          <span class="chip">NLP & LLMs</span>
-          <span class="chip">Vector DBs</span>
-          <span class="chip">Docker</span>
+          <span class="chip">AI Product Thinking</span>
+          <span class="chip">Python · FastAPI</span>
+          <span class="chip">LLMs · RAG · Agents</span>
+          <span class="chip">Evaluation & Observability</span>
+          <span class="chip">APIs & Integrations</span>
+          <span class="chip">Rapid Prototyping</span>
           <span class="chip">CI/CD</span>
         </div>
       </div>
       <aside class="avatar-card">
         <img class="avatar" src="assets/profile.png" alt="Portrait of Aayush Saxena" />
         <div class="chips" aria-label="Stats">
-          <span class="chip">4+ yrs experience</span>
-          <span class="chip">Insurance • Retail • Health</span>
+          <span class="chip">AI Validation & GenAI</span>
+          <span class="chip">Product + Engineering</span>
+          <span class="chip">Insurance • Retail • Learning</span>
         </div>
       </aside>
     </section>
@@ -179,17 +185,43 @@
       </div>
     </section>
 
+    <!-- What I bring: AI PM + FDE -->
+    <section id="approach" class="section">
+      <h2>Product thinking, backed by engineering</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="eyebrow">AI Product</div>
+          <h3>Start with the user problem</h3>
+          <p>Frame the problem, identify the user and workflow, define an MVP, prioritize trade-offs, and choose success metrics that connect AI quality to user outcomes.</p>
+          <div class="tags"><span class="tag">Problem framing</span><span class="tag">MVP scope</span><span class="tag">Success metrics</span></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">Forward Deployed Engineering</div>
+          <h3>Build, integrate, iterate</h3>
+          <p>Prototype practical AI workflows, connect APIs and data sources, debug failure modes, and work across the stack to move from a use case to a usable solution.</p>
+          <div class="tags"><span class="tag">Prototyping</span><span class="tag">APIs & data</span><span class="tag">Deployment</span></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">AI Reliability</div>
+          <h3>Measure what matters</h3>
+          <p>Use evaluation datasets, deterministic checks, model-based judges, traces, and regression tests to understand quality, risk, latency, and system trade-offs.</p>
+          <div class="tags"><span class="tag">LLM evaluation</span><span class="tag">Observability</span><span class="tag">Risk & quality</span></div>
+        </article>
+      </div>
+    </section>
+
     <!-- Projects -->
     <section id="projects" class="section">
       <h2>Featured Projects</h2>
       <div class="grid">
         <article class="card">
           <h3>LLM Evaluation & AI Validation Framework</h3>
-          <p>Designed an end-to-end AI validation framework for GenAI and RAG applications using LLM-as-a-Judge evaluators. Developed automated assessments for Groundedness, Relevance, Toxicity, PII Detection, and Guardrail Compliance with LangFuse-based observability and trace analysis. </p>
+          <p>Designed an end-to-end AI validation framework for GenAI and RAG applications using LLM-as-a-Judge evaluators. Developed automated assessments for Groundedness, Relevance, Toxicity, PII Detection, and Guardrail Compliance with LangFuse-based observability and trace analysis.</p>
           <div class="tags"><span class="tag">LLM Evaluation</span>
             <span class="tag">Langfuse</span>
             <span class="tag">GenAI Testing</span>
             <span class="tag">AI Validation</span></div>
+          <div class="project-links"><a class="project-link" href="https://github.com/storytellingengineer/ai-eval-platform" target="_blank" rel="noopener">View repository ↗</a></div>
         </article>
         <article class="card">
           <h3>Multimodal Stress Detection (StressXNet)</h3>
@@ -224,6 +256,36 @@
             <span class="tag">PyTorch</span>
             <span class="tag">UMAP</span>
           </div>
+        </article>
+        <article class="card">
+          <h3>JARVIS OS — Stateful Agent Runtime</h3>
+          <p>A personal AI operating system with persistent memory, guarded tools, hybrid local RAG, multi-agent routing, and planner/executor/verifier patterns. Built incrementally with explicit runtime lifecycle controls and testable boundaries.</p>
+          <div class="tags"><span class="tag">Agentic AI</span><span class="tag">Multi-agent runtime</span><span class="tag">RAG</span><span class="tag">Testing</span></div>
+          <div class="project-links"><a class="project-link" href="https://github.com/storytellingengineer/jarvis_os" target="_blank" rel="noopener">View repository ↗</a></div>
+        </article>
+        <article class="card">
+          <h3>AI Tutor Dashboard</h3>
+          <p>An AI learning workspace with a Next.js frontend and FastAPI backend. Supports document ingestion, persistent chunk storage, semantic retrieval with a lexical fallback, and tutoring responses grounded in uploaded study material.</p>
+          <div class="tags"><span class="tag">Next.js</span><span class="tag">FastAPI</span><span class="tag">RAG</span><span class="tag">Reliability</span></div>
+          <div class="project-links"><a class="project-link" href="https://github.com/storytellingengineer/AI_Tutor_Dashboard" target="_blank" rel="noopener">View repository ↗</a></div>
+        </article>
+        <article class="card">
+          <h3>GymStreak — Consistency-First Fitness App</h3>
+          <p>A local-first workout tracking MVP focused on the core habit loop: start a session, log sets, finish a workout, maintain a streak, and review progress. Includes a responsive React/Vite interface and installable PWA foundation.</p>
+          <div class="tags"><span class="tag">Product MVP</span><span class="tag">React</span><span class="tag">PWA</span><span class="tag">User habit loop</span></div>
+          <div class="project-links"><a class="project-link" href="https://github.com/storytellingengineer/GymStreak" target="_blank" rel="noopener">View repository ↗</a></div>
+        </article>
+        <article class="card">
+          <h3>GenAI Cover Letter Assistant</h3>
+          <p>A resume-to-cover-letter app that combines PDF text extraction, job-description inputs, LLM generation, and a deterministic fallback. Includes a FastAPI backend, static frontend, input validation, and a practical deployment path.</p>
+          <div class="tags"><span class="tag">LLM application</span><span class="tag">FastAPI</span><span class="tag">API integration</span><span class="tag">Fallback design</span></div>
+          <div class="project-links"><a class="project-link" href="https://github.com/storytellingengineer/genai-coverletter-assistant" target="_blank" rel="noopener">View repository ↗</a></div>
+        </article>
+        <article class="card">
+          <h3>LLM Use-Case Lab</h3>
+          <p>A build-and-measure workspace for small LLM applications and experiments. Each use case explores capability, limitations, prompt and API design, failure modes, quality, latency, cost, and production trade-offs.</p>
+          <div class="tags"><span class="tag">LLM experiments</span><span class="tag">Prototyping</span><span class="tag">Evaluation mindset</span></div>
+          <div class="project-links"><a class="project-link" href="https://github.com/storytellingengineer/llm-usecase-lab" target="_blank" rel="noopener">View repository ↗</a></div>
         </article>
       </div>
     </section>
